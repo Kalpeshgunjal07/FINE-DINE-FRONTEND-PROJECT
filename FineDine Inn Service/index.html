@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINE DINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/Photos/logo.png" alt="Inn Logo" class="logo-icon">
+        </div>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('services')">Our Services</button>
+            <button onclick="scrollToSection('booking')">Book</button>
+            <button onclick="scrollToSection('about')">About Us</button>
+        </div>
+    </nav>
+
+    <!-- Name Section -->
+    <div class="name-section">
+        <h1>FINE DINE</h1>
+        <p class="tagline">15 Years of Serving with Powerful Taste</p>
+    </div>
+
+<!-- Services Section -->
+<div class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+        <div class="service breakfast">
+            <img src="/Photos/BF img.jpeg" alt="Breakfast">
+            <p>Breakfast</p>
+            <p class="description">Start your day with a hearty breakfast, including eggs, bread, fruits, and more!</p>
+        </div>
+        <div class="service lunch">
+            <img src="/Photos/lunch img.avif" alt="Lunch">
+            <p>Lunch</p>
+            <p class="description">Enjoy a nutritious lunch with various options to keep you energized.</p>
+        </div>
+        <div class="service dinner">
+            <img src="/Photos/dinner img.jpg" alt="Dinner">
+            <p>Dinner</p>
+            <p class="description">Savor our delicious dinner options, perfect for ending your day on a high note.</p>
+        </div>
+        <div class="service snacks">
+            <img src="/Photos/snacks img.jpeg" alt="Evening Snacks">
+            <p>Evening Snacks</p>
+            <p class="description">Indulge in tasty evening snacks to keep your hunger at bay.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Forms Container -->
+<div class="forms-container">
+    <!-- Booking Form Section -->
+    <div class="form-container" id="booking">
+        <h2>Book Your Service</h2>
+        <form id="booking-form">
+            <label for="service">Choose a Service:</label>
+            <select id="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snacks">Evening Snacks</option>
+            </select>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" required>
+
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="tiffin-count">Tiffins/Day:</label>
+            <input type="number" id="tiffin-count" min="1" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Review Section -->
+    <div class="review-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container">
+            <div class="review">
+                <div class="review-header">
+                    <img src="/Photos/fb.jpg" alt="John Doe" class="review-image">
+                    <p><strong>John Doe</strong></p>
+                </div>
+                <p>Great service and delicious food!</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="/Photos/fb.jpg" alt="Jane Smith" class="review-image">
+                    <p><strong>Jane Smith</strong></p>
+                </div>
+                <p>Loved the variety of tiffins offered.</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="/Photos/fb.jpg" alt="Michael Brown" class="review-image">
+                    <p><strong>Michael Brown</strong></p>
+                </div>
+                <p>Excellent service and very friendly staff!</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="/Photos/fb.jpg" alt="Emily White" class="review-image">
+                    <p><strong>Emily White</strong></p>
+                </div>
+                <p>The best place for lunch in the area!</p>
+            </div>
+        </div>
+        <button class="feedback-button">Give Feedback</button>
+    </div>
+
+    <!-- Visit Form Section -->
+    <div class="form-container" id="visit">
+        <h2>Visit Us</h2>
+        <form id="visit-form">
+            <label for="visitor-name">Your Name:</label>
+            <input type="text" id="visitor-name" required>
+
+            <label for="visitor-mobile">Mobile No:</label>
+            <input type="tel" id="visitor-mobile" required>
+
+            <label for="visit-date">Date of Visit:</label>
+            <input type="date" id="visit-date" required>
+
+            <label for="visit-time">Time of Visit:</label>
+            <input type="time" id="visit-time" required>
+
+            <label for="visitor-message">Message:</label>
+            <textarea id="visitor-message" rows="5" required></textarea>
+
+            <button type="submit">Schedule Visit</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- About Us Section -->
+    <div class="about" id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-description">
+                <h3>Welcome to FINE DINE</h3>
+                <p>At FINE DINE, we have been serving delicious meals with love and care for over 15 years. Our mission is to provide high-quality food and exceptional service to our customers, ensuring a memorable dining experience every time.</p>
+                <button class="reveal-button" onclick="revealContact()">Reveal Contact Information</button>
+            </div>
+            <div class="about-contact" id="about-contact" style="display: none;">
+                <h3>Contact Us</h3>
+                <p>Mobile: <a href="tel:1234567890">123-456-7890</a></p>
+                <p>Email: <a href="mailto:finedineinn.com">info@finedineinn.com</a></p>
+                <p>Follow us on:</p>
+                <p>
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Instagram</a> | 
+                    <a href="#">Twitter</a>
+                </p>
+                <p>Address: 123 Inn Street, Navi Mumbai, Maharashtra</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
